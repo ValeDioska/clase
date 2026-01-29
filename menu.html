@@ -1,11 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Menú de CuatroCrepas</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!--Fuentes, se las puedes cambiar-->
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="/imagenes/Logo_Nuevo.svg" alt="Logo de CuatroCrepas" class="logo-img">
+            <p>MENU</p>
+        </div>
+        <p class="saludo">Gracias por elegirnos</p>
+    </header>
+
+    <main>
+        <section id="personalizada">
+            <h1>Arma tu crepa</h1>
+            <div class="paso">
+                <h3>1. Escoge la masa:</h3>
+                <ul>
+                    <li>Masa tradicional</li>
+                    <li>Avena</li>
+                    <li>Galleta Oreo</li>
+                    <li>Galleta María</li>
+                </ul>
+                <h3>2. Elije un ingrediente (incluido):</h3>
+                <div class="columnas">
+                <ul>
+                    <li>Nutella</li>
+                    <li>Cajeta</li>
+                    <li>Lechera</li>
+                    <li>Hershey's</li>
+                </ul>
+                <ul>    
+                    <li>Mermelada de fresa</li>
+                    <li>Mermelada de zarzamora</li>
+                    <li>Miel de maples</li>
+                    <li>Philadelphia</li>
+                </ul>
+                </div>
+                <p class="precio">Precio base: <span>$65</span></p>
+                <h3>3. ¿Gustas un ingrediente adicional?</h3>
+                <p class="adicional">+ $10</p>
+                <div class="columnas">
+                    <ul>
+                        <li>Plátano</li>
+                        <li>Mermeladas</li>
+                        <li>Extra Philadelphia</li>
+                        <li>Nuez</li>
+                    </ul>
+                    <ul>
+                        <li>Nieve</li>
+                        <li>Fresa natural</li>
+                        <li>Extra nutella</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="dulces">
+            <h1>Crepas Dulces</h1>
+            <div class="subseccion">
+                <h2>Masa <span class="precio">MARIA</span></h2>
+                <div class="item">
+                    <h3><span class="estrella">★</span> LA MAJA <span class="precio">$95</span></h3>
+                    <p>Philadelphia, lechera, plátano, fresa y nuez.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/LA MAJA-ISO SQ.png" alt="Foto de LA MAJA"></div>
+                </div>
+                <div class="item">
+                    <h3>LA MAJA 2 <span class="precio">$85</span></h3>
+                    <p>Philadelphia, lechera y fresa.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/" alt="Foto de LA MAJA 2"></div> <!--No encontre a la imagen-->
+                </div>
+                <div class="item">
+                    <h3>MAR Y CAJETA <span class="precio">$85</span></h3>
+                    <p>Cajeta, plátano y nuez.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/MAY Y CAJETA 24-ISO.png" alt="Foto de MAR Y CAJETA"></div>
+                </div>
+                <div class="item">
+                    <h3>MAR Y FRESA <span class="precio">$75</span></h3>
+                    <p>Nutella y fresa.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/MARYFRESA 1-ISO.png" alt="Foto de MAR Y FRESA"></div>
+                </div>
+                <div class="item">
+                    <h3>MAR Y BANANA <span class="precio">$75</span></h3>
+                    <p>Nutella y plátano.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/MAR Y BANANA 24 - ISO.png" alt="Foto de MAR Y BANANA"></div>
+                </div>
+                <div class="item">
+                    <h3><span class="estrella">★</span> LA CUATRO CREPAS <span class="precio">$95</span></h3>
+                    <p>Nutella, Philadelphia, plátano, fresa y nuez.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png" alt="Foto de LA CUATRO CREPAS"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="subseccion">
+                <h2>Masas <span class="precio">OREO / AVENA</span></h2>
+                <div class="item">
+                    <h3><span class="precio">OREO </span>SENCILLA <span class="precio">$75</span></h3>
+                    <p>Masa Oreo con Philadelphia y nutella.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/OREO SENCILLA 24-ISO.png" alt="Foto de OREO SENCILLA"></div>
+                </div>
+                <div class="item">
+                    <h3><span class="precio">OREO </span>FRESA <span class="precio">$95</span></h3>
+                    <p>Masa Oreo con Philadelphia, nutella, plátano y fresa.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/OREO Y FRESA 24-ISO.png" alt="Foto de OREO FRESA"></div>
+                </div>
+                <div class="item">
+                    <h3><span class="precio">OREO </span>NUEZ <span class="precio">$95</span></h3>
+                    <p>Masa Oreo con Philadelphia, nutella, plátano y nuez.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/OREO NUEZO - ISO.png" alt="Foto de OREO NUEZ"></div>
+                </div>
+                <div class="item">
+                    <h3><span class="precio">AVENA</span> Y NUEZ <span class="precio">$75</span></h3>
+                    <p>Masa de avena con miel de maple y nuez.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/AVENA Y NUEZ 24-ISO.png" alt="Foto de AVENA Y NUEZ"></div>
+                </div>
+                <div class="item">
+                    <h3><span class="precio">AVENA</span> BANANA <span class="precio">$85</span></h3>
+                    <p>Masa de avena con lechera, nuez y plátano.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/AVENA BANANA 24-ISO.png" alt="Foto de AVENA BANANA"></div>
+                </div>
+                <div class="item">
+                    <h3><span class="precio">AVENA </span>PHILLY <span class="precio">$85</span></h3>
+                    <p>Masa de avena con Philadelphia, miel de maple y amaranto.</p>
+                    <div class="foto"><img src="/imgs/fotos_menu/AVENA PHILLY 24 - ISO.png" alt="Foto de AVENA PHILLY"></div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="saladas">
+            <h1>Crepas Saladas</h1>
+            <h2>En masa <span class="precio">TRADICIONAL</span> o de <span class="precio">AVENA</span></h2>
+            <div class="item">
+                <h3>CREPIZZA <span class="precio">$85</span></h3>
+                <p>Con salsa Ragu, queso Philadelphia, Mozarella y Peppernois.</p>
+                <div class="foto"><img src="/imgs/fotos_menu/" alt="Foto de CREPIZZA"></div>  <!--no encontre la foto-->
+            </div>
+            <div class="item">
+                <h3>CREPA DE JAMÓN <span class="precio">$85</span></h3>
+                <p>Con queso Philadelphia, queso Manchego y jamón.</p>
+                <div class="foto"><img src="/imgs/fotos_menu/" alt="Foto de CREPA DE JAMÓN"></div>  <!--no encontre la foto-->
+            </div>
+            <div class="item">
+                <h3>CREPA DOS QUESOS <span class="precio">$85</span></h3>
+                <p>Con queso Philadelphia y Mozarella.</p>
+                <div class="foto"><img src="/imgs/fotos_menu/" alt="Foto de CREPA DOS QUESOS"></div> <!--no encontre la foto-->
+            </div>
+            <div class="item">
+                <h3>LA CHAMPINOLI <span class="precio">$95</span></h3>
+                <p>Con queso Philadelphia, queso Manchego, champinones y cebolla salteados.</p>
+                <div class="foto"><img src="/imgs/fotos_menu/champinoli menu plato black.png" alt="Foto de LA CHAMPINOLI"></div>
+            </div>
+            <hr>
+            <p class="consulta">Consulta nuestro producto estrella:</p>
+            <div class="item destacado">
+                <h3><span class="estrella">★</span> CREPA SUPREMA <span class="precio">$110</span></h3>
+                <p>Con queso Philadelphia y Manchego, jamón, peppernois, salsa Ragi y champinones con cebolla salteados.</p>
+                <div class="foto"><img src="/imgs/fotos_menu/suprema sobre.png" alt="Foto de CREPA SUPREMA"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Siguenos en redes:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li><a href="https://x.com/" target="_blank">X</a></li>
+        </ul>
+        <div class="contacto">
+            <p><strong>Dirección:</strong> Calle 8 #13, Residencial Las Puentes, 2do Sector, San Nicolas de los Garza, Nuevo Leon.</p>
+            <p><strong>Teléfono:</strong> 812 756 1582</p>
+            <p><strong>Horarios:</strong> Sabado a Jueves de 6:00 PM a 10:30 PM</p>
+            <p><strong>Cerrado:</strong> Viernes</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
 </body>
 </html>
