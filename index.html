@@ -19,7 +19,7 @@
         <img src="/imgs/logo/Logo_Nuevo.svg" alt="Logo">
         <ul class="nav-links">
             <li><a href="#hero">Sobre nosotros<span></span></a></li>
-            <li><a href="#">Nuestro menú<span></span></a></li>
+            <li><a href="menu.html">Nuestro menú<span></span></a></li>
             <li><a href="#maps">Maps<span></span></a></li>
             <li><a href="#galeria">Galería<span></span></a></li>
             <li><a href="#">Contacto<span></span></a></li>
@@ -59,22 +59,23 @@
 
 
     <section id="galeria" class="galeria">
-        <h1>Galería de fotos</h1>
-        <div class ="top-content">
+
+    <h1>Galería de fotos</h1>
+
+    <input type="radio" name="fotos" id="todas" checked>
+    <input type="radio" name="fotos" id="avena">
+    <input type="radio" name="fotos" id="oreo">
+    <input type="radio" name="fotos" id="otras">
+
+    <div class="top-content">
         <h3>Todas las fotos</h3>
-        <input type="radio" name="fotos" id="todas" checked>
-        <input type="radio" name="fotos" id="avena">
-        <input type="radio" name="fotos" id="oreo">
-        <input type="radio" name="fotos" id="otras">
-        </div>
-        
         <div class="filtros">
-            <label for="todas">Todas las imagenes</label>
+            <label for="todas">Todas</label>
             <label for="avena">Avena</label>
             <label for="oreo">Oreo</label>
             <label for="otras">Otros</label>
-
         </div>
+    </div>
 
         <div class="photo-gallery">
             <div class="pic avena">
@@ -132,10 +133,47 @@
     </section>
 
     <section id="footer" class="footer">
+        <footer class="footer">
+    <div class="footer-container">
 
+        <div class="footer-brand">
+            <img src="imgs/logo/LOGO PPAL CUATRO CREPAS BCO.png" alt="Cuatro Crepas">
+            <p>Amor por las crepas.</p>
+        </div>
 
+        <div class="footer-section">
+            <h4>Dirección</h4>
+            <p>CC. 8 13, Las Puentes Segundo Sector,<br>66460 San Nicolás de los Garza, N.L.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>812 756 1582</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Horarios</h4>
+            <p>Sáb - Jue: 6:00 pm - 10:30 pm<br>
+               Cerrado los viernes</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Cuatro Crepas. Todos los derechos reservados.
+    </div>
+    </footer>
     </section>
-
 </main>
 
 </body>
