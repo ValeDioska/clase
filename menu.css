@@ -1,0 +1,263 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #f7e7cd;
+    background-color: #ecd0a0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.logo p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #d4af37;
+}
+
+.saludo {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.paso {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 3px solid #d4af37;
+    background-color: #f9f9f9;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columnas ul {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.columnas ul:last-child {
+    margin-right: 0;
+}
+
+.precio {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 1.1em;
+}
+
+.adicional {
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #fafafa;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.item p {
+    margin: 5px 0;
+    color: #555555;
+    text-align: center;
+}
+
+.foto {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.estrella {
+    color: #d4af37;
+    font-size: 1.2em;
+}
+
+.destacado {
+    background-color: #fff8e1;
+    padding: 15px;
+    border-left: 5px solid #d4af37;
+    border-radius: 5px;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.consulta {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+    grid-column: span 2;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 20px 0;
+    grid-column: span 2;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #cccccc;
+    margin-top: 40px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer li {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #d4af37;
+}
+
+.contacto {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .columnas {
+        flex-direction: column;
+    }
+    .columnas ul {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    main {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .foto img {
+        width: 100%;
+        max-width: 200px;
+    }
+    .logo-img {
+        width: 100px;
+    }
+    .items-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .destacado, .consulta, hr {
+        grid-column: span 1;
+    }
+}
