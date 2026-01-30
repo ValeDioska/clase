@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +6,8 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
-
 
 .header {
     width: 100%;
@@ -23,12 +21,10 @@ body {
     justify-content: space-between;
 }
 
-
 .navbar img {
     height: 73px;
     width: auto;
 }
-
 
 .nav-links {
     display: flex;
@@ -36,7 +32,6 @@ body {
     list-style: none;
     gap: 25px;
 }
-
 
 .navbar a {
     position: relative;
@@ -69,14 +64,12 @@ body {
     transform-origin: left;
 }
 
-
 .hero {
     min-height: calc(100vh - 80px); 
     background-color: #f2a934;
     display: flex;
     align-items: center;
 }
-
 
 .hero-wrapper {
     width: 100%;
@@ -87,7 +80,6 @@ body {
     align-items: center;
     gap: 40px;
 }
-
 
 .hero-image {
     flex: 1;
@@ -102,7 +94,6 @@ body {
     height: auto;
 }
 
-
 .hero-content {
     flex: 1;
     color: white;
@@ -115,7 +106,7 @@ body {
 }
 
 .hero-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
     max-width: 500px;
 }
@@ -140,11 +131,14 @@ body {
     border-radius: 20px;
 }
 
-/* Modificaciones para la galería */
 
 .galeria {
     text-align: center;
     padding: 80px 20px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* MISMO ANCHO MÁXIMO PARA TODO */
+    margin: 0 auto; /* CENTRAR TODO EL CONTENIDO */
 }
 
 .galeria h1 {
@@ -169,14 +163,24 @@ body {
     animation: animate 4s linear infinite;
 }
 
-/* Contenedor de filtros - estilo similar a la imagen 2 */
+@keyframes animate {
+    0% { width: 100px; }
+    50% { width: 200px; }
+    100% { width: 100px; }
+}
+
+/* Ocultar radio buttons */
+#todas, #avena, #oreo, #otras {
+    display: none;
+}
+
+/* Contenedor principal de filtros - MISMO ANCHO */
 .top-content {
+    position: relative;
     background-color: #f8f8f8;
-    width: 100%;
-    max-width: 800px;
+    width: 100%; /* 100% del contenedor .galeria */
     margin: 0 auto 40px auto;
     padding: 0;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,6 +201,7 @@ body {
     margin: 0;
 }
 
+/* Contenedor de botones de filtro */
 .filtros {
     width: 100%;
     display: flex;
@@ -218,6 +223,8 @@ body {
     border-radius: 30px;
     border: 2px solid transparent;
     font-weight: 500;
+    position: relative;
+    overflow: hidden;
 }
 
 .filtros label:hover {
@@ -226,40 +233,41 @@ body {
     border-color: #f2a934;
 }
 
-/* Ocultar los radio buttons */
-input[type="radio"] {
-    display: none;
-}
-
-/* Estilo para filtro activo */
-input[type="radio"]:checked + label {
+/* Línea inferior animada para botones activos */
+.filtros label::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
     background-color: #f2a934;
-    color: white;
-    border-color: #f2a934;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-/* Ajuste de tamaño de imágenes en la galería */
+/* ============================ */
+/* GALERÍA DE IMÁGENES - MISMO ANCHO */
+/* ============================ */
+
 .photo-gallery {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
+    width: 100%; /* MISMO ANCHO que .galeria y .top-content */
+    margin: 0 auto; /* Centrado */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    position: relative;
 }
 
 .photo-gallery .pic {
-    position: relative;
     height: 250px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.photo-gallery .pic:hover {
-    transform: translateY(-5px);
+    transition: all 0.5s ease;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .photo-gallery .pic img {
@@ -274,7 +282,124 @@ input[type="radio"]:checked + label {
     transform: scale(1.05);
 }
 
-/* Efecto overlay al pasar el mouse */
+/* ============================ */
+/* FILTRADO CON CSS PURO */
+/* ============================ */
+
+/* Cuando TODAS está seleccionado */
+#todas:checked ~ .photo-gallery .pic {
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+}
+
+/* Botón TODAS activo */
+#todas:checked ~ .top-content .filtros label[for="todas"] {
+    background-color: #f2a934;
+    color: white;
+    border-color: #f2a934;
+}
+
+#todas:checked ~ .top-content .filtros label[for="todas"]::after {
+    width: 70%;
+}
+
+/* ========== FILTRO AVENA ========== */
+#avena:checked ~ .photo-gallery .pic {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#avena:checked ~ .photo-gallery .pic.avena {
+    opacity: 1;
+    transform: scale(1);
+    height: 250px;
+    overflow: visible;
+    margin: initial;
+    padding: initial;
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+#avena:checked ~ .top-content .filtros label[for="avena"] {
+    background-color: #f2a934;
+    color: white;
+    border-color: #f2a934;
+}
+
+#avena:checked ~ .top-content .filtros label[for="avena"]::after {
+    width: 70%;
+}
+
+/* ========== FILTRO OREO ========== */
+#oreo:checked ~ .photo-gallery .pic {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#oreo:checked ~ .photo-gallery .pic.oreo {
+    opacity: 1;
+    transform: scale(1);
+    height: 250px;
+    overflow: visible;
+    margin: initial;
+    padding: initial;
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+#oreo:checked ~ .top-content .filtros label[for="oreo"] {
+    background-color: #f2a934;
+    color: white;
+    border-color: #f2a934;
+}
+
+#oreo:checked ~ .top-content .filtros label[for="oreo"]::after {
+    width: 70%;
+}
+
+/* ========== FILTRO OTRAS ========== */
+#otras:checked ~ .photo-gallery .pic {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#otras:checked ~ .photo-gallery .pic.otros {
+    opacity: 1;
+    transform: scale(1);
+    height: 250px;
+    overflow: visible;
+    margin: initial;
+    padding: initial;
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+#otras:checked ~ .top-content .filtros label[for="otras"] {
+    background-color: #f2a934;
+    color: white;
+    border-color: #f2a934;
+}
+
+#otras:checked ~ .top-content .filtros label[for="otras"]::after {
+    width: 70%;
+}
+
+/* ============================ */
+/* EFECTOS HOVER */
+/* ============================ */
 .photo-gallery .pic::after {
     content: "";
     position: absolute;
@@ -285,42 +410,50 @@ input[type="radio"]:checked + label {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.3s ease;
+    pointer-events: none;
 }
 
 .photo-gallery .pic:hover::after {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#todas:checked ~ .container .photo-gallery .pic{
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-    transition: .5s;
+/* ============================ */
+/* RESPONSIVE */
+/* ============================ */
+@media (max-width: 1240px) {
+    .galeria {
+        padding: 80px 40px;
+        max-width: 100%;
+    }
 }
-
-#avena:checked ~ .container .photo-gallery .avena{
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-}
-
-
 
 @media (max-width: 768px) {
+    .galeria {
+        padding: 60px 20px;
+    }
+    
     .galeria h1 {
         font-size: 28px;
     }
     
     .photo-gallery {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
     }
     
     .photo-gallery .pic {
         height: 200px;
     }
     
+    #avena:checked ~ .photo-gallery .pic.avena,
+    #oreo:checked ~ .photo-gallery .pic.oreo,
+    #otras:checked ~ .photo-gallery .pic.otros {
+        height: 200px;
+    }
+    
     .filtros {
         padding: 15px;
+        gap: 8px;
     }
     
     .filtros label {
@@ -329,16 +462,129 @@ input[type="radio"]:checked + label {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    .galeria {
+        padding: 40px 15px;
+    }
+    
+    .galeria h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .top-content {
+        margin-bottom: 30px;
+    }
+    
     .photo-gallery {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
     }
     
     .photo-gallery .pic {
         height: 180px;
     }
     
-    .top-content {
-        border-radius: 8px;
+    #avena:checked ~ .photo-gallery .pic.avena,
+    #oreo:checked ~ .photo-gallery .pic.oreo,
+    #otras:checked ~ .photo-gallery .pic.otros {
+        height: 180px;
     }
- }
+    
+    .top-content h3 {
+        font-size: 1.1rem;
+        line-height: 50px;
+    }
+    
+    .filtros {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+    
+    .filtros label {
+        width: 90%;
+        text-align: center;
+        margin: 5px 0;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    
+    .photo-gallery .pic {
+        height: 250px;
+    }
+    
+    #avena:checked ~ .photo-gallery .pic.avena,
+    #oreo:checked ~ .photo-gallery .pic.oreo,
+    #otras:checked ~ .photo-gallery .pic.otros {
+        height: 250px;
+    }
+}
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+}
+
+.footer-brand img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #f2a934;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    color: #f2a934;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
