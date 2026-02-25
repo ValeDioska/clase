@@ -22,7 +22,7 @@
             <li><a href="menu.html">Nuestro menú<span></span></a></li>
             <li><a href="#maps">Maps<span></span></a></li>
             <li><a href="#galeria">Galería<span></span></a></li>
-            <li><a href="#">Contacto<span></span></a></li>
+            <li><a href="#footer">Contacto<span></span></a></li>
         </ul>
     </nav>
 </header>
@@ -168,14 +168,46 @@
         </div>
 
     </div>
+    <div class="footer-section newsletter">
+                <h4>¡Regístrate!</h4>
+                <p>Recibe noticias y promociones</p>
+                <button id="btnRegistro" class="btn-registro">Registrarme</button>
+            </div>
+        </div>
 
     <div class="footer-bottom">
         © 2026 Cuatro Crepas. Todos los derechos reservados.
     </div>
     </footer>
     </section>
-</main>
 
+    <div id="modalRegistro" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Regístrate</h2>
+        <p>¡Sé el primero en enterarte de nuestras promociones!</p>
+        
+        <form id="formRegistro">
+            <div class="campo-formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+            </div>
+            
+            <div class="campo-formulario">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="tu@email.com">
+            </div>
+            
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+        
+        <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+            ¡Gracias por registrarte!
+        </div>
+    </div>
+</div>
+</main>
+<script src="supabase.js"></script>
 </body>
 
 </html>
