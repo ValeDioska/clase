@@ -430,7 +430,7 @@ html {
 .footer {
     background-color: #111;
     color: #fff;
-    padding: 60px 40px 20px;
+    padding: 35px 40px 15px;
 }
 
 .footer-container {
@@ -438,7 +438,7 @@ html {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px;
+    gap: 30px;
 }
 
 .footer-brand img {
@@ -458,7 +458,7 @@ html {
 }
 
 .footer-section p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     opacity: 0.85;
 }
