@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/frontend/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
     <section id="hero" class="hero">
         <div class="hero-wrapper">
             <div class="hero-image">
-                <img src="imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png" alt="Foto Crepas">
+                <img src="/imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png" alt="Foto Crepas">
             </div>
             <div class="hero-content">
                 <h1>Amor por las Crepas.</h1>
@@ -117,7 +117,7 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <img src="imgs/logo/LOGO PPAL CUATRO CREPAS BCO.png" alt="Cuatro Crepas">
+                    <img src="/imgs/logo/LOGO PPAL CUATRO CREPAS BCO.png" alt="Cuatro Crepas">
                     <p>Amor por las crepas.</p>
                 </div>
                 <div class="footer-section">
@@ -163,13 +163,13 @@
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
                 </div>
-                
                 <div class="campo-formulario">
                     <label for="correo">Correo electrónico:</label>
                     <input type="email" id="correo" name="correo" required placeholder="tu@email.com">
                 </div>
-                
                 <button type="submit" class="btn-enviar">Enviar</button>
+                <script src="js/registro.js"></script>
+
             </form>
             
             <div id="mensajeExito" class="mensaje-exito" style="display: none;">
@@ -178,6 +178,8 @@
         </div>
     </div>
 </main>
+
+
 
 <script>
 // Efecto de scroll para el header
@@ -193,6 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-<script src="supabase.js"></script>
+
 </body>
 </html>
