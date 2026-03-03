@@ -1,0 +1,123 @@
+{
+  "fotos": [
+    {
+      "id": 1,
+      "nombre": "Avena Banana",
+      "categoria": "avena",
+      "ruta": "../imgs/fotos_menu/AVENA BANANA 24-ISO.png",
+      "descripcion": "Crepa de avena con banana"
+    },
+    {
+      "id": 2,
+      "nombre": "Oreo Nuezo",
+      "categoria": "oreo",
+      "ruta": "../imgs/fotos_menu/OREO NUEZO - ISO.png",
+      "descripcion": "Crepa Oreo con nuez"
+    },
+    {
+      "id": 3,
+      "nombre": "Champiñoli",
+      "categoria": "saladas",
+      "ruta": "../imgs/fotos_menu/champinoli menu plato black.png",
+      "descripcion": "Crepa de champiñones"
+    },
+    {
+      "id": 4,
+      "nombre": "Avena Philly",
+      "categoria": "avena",
+      "ruta": "../imgs/fotos_menu/AVENA PHILLY 24 - ISO.png",
+      "descripcion": "Crepa de avena con philadelphia"
+    },
+    {
+      "id": 5,
+      "nombre": "Oreo Sencilla",
+      "categoria": "oreo",
+      "ruta": "../imgs/fotos_menu/OREO SENCILLA 24-ISO.png",
+      "descripcion": "Crepa Oreo sencilla"
+    },
+    {
+      "id": 6,
+      "nombre": "Cuatro Crepas",
+      "categoria": "otros",
+      "ruta": "../imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png",
+      "descripcion": "Foto banner cuatro crepas"
+    },
+    {
+      "id": 7,
+      "nombre": "Avena y Nuez",
+      "categoria": "avena",
+      "ruta": "../imgs/fotos_menu/AVENA Y NUEZ 24 - ISO.png",
+      "descripcion": "Crepa de avena con nuez"
+    },
+    {
+      "id": 8,
+      "nombre": "Oreo y Fresa",
+      "categoria": "oreo",
+      "ruta": "../imgs/fotos_menu/OREO Y FRESA 24-ISO.png",
+      "descripcion": "Crepa Oreo con fresa"
+    },
+    {
+      "id": 9,
+      "nombre": "La Maja",
+      "categoria": "otros",
+      "ruta": "../imgs/fotos_menu/LA MAJA-ISO SQ.png",
+      "descripcion": "Crepa La Maja"
+    },
+    {
+      "id": 10,
+      "nombre": "Mar y Banana",
+      "categoria": "otros",
+      "ruta": "../imgs/fotos_menu/MAR Y BANANA 24 - ISO.png",
+      "descripcion": "Crepa Mar y Banana"
+    },
+    {
+      "id": 11,
+      "nombre": "Maryfresa",
+      "categoria": "otros",
+      "ruta": "../imgs/fotos_menu/MARYFRESA 1-ISO.png",
+      "descripcion": "Crepa Maryfresa"
+    },
+    {
+      "id": 12,
+      "nombre": "May y Cajeta",
+      "categoria": "otros",
+      "ruta": "../imgs/fotos_menu/MAY Y CAJETA 24-ISO.png",
+      "descripcion": "Crepa May y Cajeta"
+    },
+    {
+      "id": 13,
+      "nombre": "Suprema",
+      "categoria": "saladas",
+      "ruta": "../imgs/fotos_menu/suprema sobre.png",
+      "descripcion": "Crepa Suprema"
+    },
+    {
+      "id": 14,
+      "nombre": "Crepa de Jamón",
+      "categoria": "saladas",
+      "ruta": "../imgs/fotos_menu/Crepa de Jamon.png",
+      "descripcion": "Crepa de jamón con queso"
+    },
+    {
+      "id": 15,
+      "nombre": "Dos Quesos",
+      "categoria": "saladas",
+      "ruta": "../imgs/fotos_menu/Dos Quesos.png",
+      "descripcion": "Crepa de dos quesos"
+    },
+    {
+      "id": 16,
+      "nombre": "Crepizza",
+      "categoria": "saladas",
+      "ruta": "../imgs/fotos_menu/Crepizza.png",
+      "descripcion": "Crepizza especial"
+    },
+    {
+      "id": 17,
+      "nombre": "La Maja 2",
+      "categoria": "otros",
+      "ruta": "../imgs/fotos_menu/La_Maja_2-removebg-preview.png",
+      "descripcion": "La Maja versión 2"
+    }
+  ]
+}

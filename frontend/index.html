@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" href="/imgs/logo/isotipo-color-png.svg">
+    <link rel="shortcut icon" href="../imgs/logo/isotipo-color-png.svg">
     <title>Cuatro Crepas</title>
 </head>
 <body>
 
 <header class="header">
     <nav class="navbar">
-        <img src="/imgs/logo/Logo_Nuevo.svg" alt="Logo">
+        <img src="../imgs/logo/Logo_Nuevo.svg" alt="Logo">
         <ul class="nav-links">
             <li><a href="#hero">Sobre nosotros<span></span></a></li>
             <li><a href="menu.html">Nuestro menú<span></span></a></li>
@@ -31,7 +31,7 @@
     <section id="hero" class="hero">
         <div class="hero-wrapper">
             <div class="hero-image">
-                <img src="/imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png" alt="Foto Crepas">
+                <img src="../imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png" alt="Foto Crepas">
             </div>
             <div class="hero-content">
                 <h1>Amor por las Crepas.</h1>
@@ -55,60 +55,19 @@
     <section id="galeria" class="galeria">
         <h1>Galería de fotos</h1>
 
-        <input type="radio" name="fotos" id="todas" checked>
-        <input type="radio" name="fotos" id="avena">
-        <input type="radio" name="fotos" id="oreo">
-        <input type="radio" name="fotos" id="otras">
-
+        <!-- Los radio buttons se crearán dinámicamente aquí -->
+        
         <div class="top-content">
             <h3>Todas las fotos</h3>
             <div class="filtros">
-                <label for="todas">Todas</label>
-                <label for="avena">Avena</label>
-                <label for="oreo">Oreo</label>
-                <label for="otras">Otros</label>
+                <!-- Los filtros se generarán dinámicamente -->
             </div>
         </div>
 
         <div class="photo-gallery">
-            <div class="pic avena">
-                <img src="/imgs/fotos_menu/AVENA BANANA 24-ISO.png">
-            </div>
-            <div class="pic oreo">
-                <img src="/imgs/fotos_menu/OREO NUEZO - ISO.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/champinoli menu plato black.png">
-            </div>
-            <div class="pic avena">
-                <img src="/imgs/fotos_menu/AVENA PHILLY 24 - ISO.png">
-            </div>
-            <div class="pic oreo">
-                <img src="/imgs/fotos_menu/OREO SENCILLA 24-ISO.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/FOTO CUATRO CREPAS BANNER.png">
-            </div>
-            <div class="pic avena">
-                <img src="/imgs/fotos_menu/AVENA Y NUEZ 24 - ISO.png">
-            </div>
-            <div class="pic oreo">
-                <img src="/imgs/fotos_menu/OREO Y FRESA 24-ISO.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/LA MAJA-ISO SQ.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/MAR Y BANANA 24 - ISO.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/MARYFRESA 1-ISO.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/MAY Y CAJETA 24-ISO.png">
-            </div>
-            <div class="pic otros">
-                <img src="/imgs/fotos_menu/suprema sobre.png">
+            <!-- Las imágenes se cargarán dinámicamente -->
+            <div style="grid-column: 1/-1; text-align: center; padding: 50px;">
+                Cargando galería...
             </div>
         </div>
     </section>
@@ -117,7 +76,7 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <img src="/imgs/logo/LOGO PPAL CUATRO CREPAS BCO.png" alt="Cuatro Crepas">
+                    <img src="../imgs/logo/LOGO PPAL CUATRO CREPAS BCO.png" alt="Cuatro Crepas">
                     <p>Amor por las crepas.</p>
                 </div>
                 <div class="footer-section">
@@ -169,7 +128,6 @@
                 </div>
                 <button type="submit" class="btn-enviar">Enviar</button>
                 <script src="js/registro.js"></script>
-
             </form>
             
             <div id="mensajeExito" class="mensaje-exito" style="display: none;">
@@ -179,10 +137,7 @@
     </div>
 </main>
 
-
-
 <script>
-// Efecto de scroll para el header
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     
@@ -195,6 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
+<script src="js/gestorGaleria.js"></script>
 </body>
 </html>
